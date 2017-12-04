@@ -1,0 +1,2 @@
+AndroBot (summer project under Robotics Club IIT Kanpur), is capable to communicate to the user through android smartphone mounted on the robot. It can navigate autonomously based on inputs given by user to the smartphone (connected over Internet) by calculating optimum path and avoiding obstacles.
+This repository contains android application which establishes serial communication between phone and arduino microcontroller, takes inputs, calculates path and returns signals to arduino.git push origin master
