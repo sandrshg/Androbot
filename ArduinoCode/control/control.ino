@@ -1,11 +1,11 @@
 //motor one - right
-int enA = 9;
-int in1 = 2;
-int in2 = 3;
+int enA = 5;
+int in1 = 6;
+int in2 = 4;
 // motor two - left
-int enB = 8;
-int in3 = 4;
-int in4 = 5;
+int enB = 7;
+int in3 = 2;
+int in4 = 3;
 
 void setup() {
   pinMode(enA, OUTPUT);
@@ -26,28 +26,30 @@ void turnleft() {
   digitalWrite(in2,HIGH);
   digitalWrite(in3,HIGH);
   digitalWrite(in4,LOW);
-  analogWrite(enB,200);
+  analogWrite(enB,255);
+  analogWrite(enA,255);
 }
 void turnright() {
   digitalWrite(in1,HIGH);
   digitalWrite(in2,LOW);
   digitalWrite(in3,LOW);
   digitalWrite(in4,HIGH);
-  analogWrite(enA,200);
-}
-void goforward() {
-  digitalWrite(in1,HIGH);
-  digitalWrite(in2,LOW);
-  digitalWrite(in3,HIGH);
-  digitalWrite(in4,LOW);
   analogWrite(enA,255);
   analogWrite(enB,255);
 }
-void movebackward() {
+void goforward() {
   digitalWrite(in1,LOW);
   digitalWrite(in2,HIGH);
   digitalWrite(in3,LOW);
   digitalWrite(in4,HIGH);
+  analogWrite(enA,255);
+  analogWrite(enB,255);
+}
+void movebackward() {
+  digitalWrite(in1,HIGH);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,HIGH);
+  digitalWrite(in4,LOW);
   analogWrite(enA,255);
   analogWrite(enB,255);
 }
@@ -73,5 +75,5 @@ void loop() {
   if(c=='r')
   turnright();
   if(c=='s')
-  stop();
+  stop();  
 }
